@@ -1,3 +1,59 @@
+'''
+This cie_de_2000 implementation is based on the papers: 
+1. 
+@article{Sharma2005TheObservations,
+    title = {{The CIEDE2000 color-difference formula: Implementation notes, supplementary test data, and mathematical observations}},
+    year = {2005},
+    journal = {Color Research {\&} Application},
+    author = {Sharma, Gaurav and Wu, Wencheng and Dalal, Edul N},
+    number = {1},
+    month = {2},
+    pages = {21--30},
+    volume = {30},
+    publisher = {Wiley Subscription Services, Inc., A Wiley Company},
+    url = {http://dx.doi.org/10.1002/col.20070},
+    doi = {10.1002/col.20070},
+    issn = {1520-6378},
+    keywords = {CIE, CIE94, CIEDE2000, CIELAB, CMC, color-difference metrics}
+}
+
+2. 
+@article{Luo2001TheCIEDE2000,
+    title = {{The development of the CIE 2000 colour-difference formula: CIEDE2000}},
+    year = {2001},
+    journal = {Color Research {\&} Application},
+    author = {Luo, M R and Cui, G and Rigg, B},
+    number = {5},
+    month = {10},
+    pages = {340--350},
+    volume = {26},
+    publisher = {John Wiley {\&} Sons, Inc.},
+    url = {http://dx.doi.org/10.1002/col.1049},
+    doi = {10.1002/col.1049},
+    issn = {1520-6378},
+    keywords = {BFP, CIE, CIE94, CIEDE2000, CIELAB, CMC, LCD, color difference metrics}
+}
+
+	Copyright 2017 Muhammed Shameem mailtoshameempk@gmail.com
+
+    This file is part of Fast_seg.
+
+    Fast_seg is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    Fast_seg is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with Fast_seg.  If not, see <http://www.gnu.org/licenses/>.
+    
+'''
+
+
 import numpy as np
 
 
