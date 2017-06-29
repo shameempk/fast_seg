@@ -18,4 +18,4 @@ Executing the code:
 4. Output image will be written in running folder, named "out.png"
 
 
-For any other inquiries file an issue at https://github.com/shameempk/fast_seg.
+For any other inquiries file an issue at https://github.com/shameempk/fast_seg .
