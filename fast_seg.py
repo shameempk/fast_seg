@@ -2,23 +2,23 @@
 '''
 	Copyright 2017 Muhammed Shameem mailtoshameempk@gmail.com
 
-    This file is part of Fast_seg.
+	 This file is part of Fast_seg.
 
-    Fast_seg is free software: you can redistribute it and/or modify
-    it under the terms of the GNU General Public License as published by
-    the Free Software Foundation, either version 3 of the License, or
-    (at your option) any later version.
+	 Fast_seg is free software: you can redistribute it and/or modify
+	 it under the terms of the GNU General Public License as published by
+	 the Free Software Foundation, either version 3 of the License, or
+	 (at your option) any later version.
 
-    Fast_seg is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU General Public License for more details.
+	 Fast_seg is distributed in the hope that it will be useful,
+	 but WITHOUT ANY WARRANTY; without even the implied warranty of
+	 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+	 GNU General Public License for more details.
 
-    You should have received a copy of the GNU General Public License
-    along with Fast_seg.  If not, see <http://www.gnu.org/licenses/>.
+	 You should have received a copy of the GNU General Public License
+	 along with Fast_seg.  If not, see <http://www.gnu.org/licenses/>.
 
 '''
-
+import sys, getopt
 import cv2
 import numpy as np
 import networkx as nx
@@ -30,9 +30,8 @@ drawing = False
 mode = "ob"
 marked_ob_pixels=[]
 marked_bg_pixels=[]
-I=cv2.imread("../images/bsds300/108005.jpg") #imread wont rise exceptions by default
-I_dummy=np.zeros(I.shape)
-I_dummy=np.copy(I)
+I=None
+I_dummy=None
 l_range=[0,256]
 a_range=[0,256]
 b_range=[0,256]
@@ -233,7 +232,26 @@ def gen_graph(I,SP_list,hist_ob,hist_bg):
 	return G
 
 def main():
-	global I,mode
+	global I,mode,I_dummy
+
+	inputfile = ''
+	try:
+		opts, args = getopt.getopt(sys.argv[1:], "i:h", ["input-image=", "help"])
+	except getopt.GetoptError:
+		print('fast_seg.py -i <input image>')
+		sys.exit(2)
+	for opt, arg in opts:
+		if opt == '-h':
+			print ('fast_seg.py -i <input image>')
+			sys.exit()
+		elif opt in ("-i", "--input-image"):
+			inputfile = arg
+	print('Using image: ', inputfile)
+
+	I=cv2.imread(inputfile) #imread wont rise exceptions by default
+	I_dummy=np.zeros(I.shape)
+	I_dummy=np.copy(I)
+	
 	h,w,c=I.shape
 	region_size=20
 	cv2.namedWindow('Mark the object and background')
