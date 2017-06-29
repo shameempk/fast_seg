@@ -11,8 +11,9 @@ Dependencies:
 
 Executing the code:
 
-1. Run the main file using python3: python3 fast_seg.py
+1. Run the main file using python3: python3 fast_seg.py -i <input-image>
 	* Will provide a minimal GUI to mark the seed pixels. While marking, switching between "background" and "object" pixels are done using keys 'b' and 'o' respectively. By default GUI initializes in object mode. Object is marked with "red" markings and Background with "blue".
+	* Use 'python3 fast_seg.py -h' for help
 2. Press ESC after marking the seeds.
 3. Output window will provide the results.
 4. Output image will be written in running folder, named "out.png"
