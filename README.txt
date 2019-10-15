@@ -20,3 +20,6 @@ Executing the code:
 
 
 For any other inquiries file an issue at https://github.com/shameempk/fast_seg .
+
+Research paper:
+https://www.ijitee.org/wp-content/uploads/papers/v8i8/H7423068819.pdf
