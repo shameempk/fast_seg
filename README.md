@@ -5,8 +5,9 @@
 	* `libopencv-dev`
 	* `python3-tk` (to show the result window)
 2. Project dependencies
-	(Recommends using python virtualenv: http://docs.python-guide.org/en/latest/dev/virtualenvs)
+	(Recommend using python virtualenv: http://docs.python-guide.org/en/latest/dev/virtualenvs)
 	1. All dependencies are enlisted in requirements.txt
+	
 		Install them using : `pip install -r requirements.txt`
 
 
