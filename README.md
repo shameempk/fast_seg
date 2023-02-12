@@ -29,7 +29,7 @@ Research paper can be downloaded from [here](https://www.ijitee.org/wp-content/u
 If you find fast_seg useful please cite this paper in your work:
 ```
 @misc{
-naik_shameem_2019, 
+naik2019fast, 
 title={Fast Interactive SuperpixelBased Image Region Generation}, 
 url={https://www.ijitee.org/wp-content/uploads/papers/v8i8/H7423068819.pdf}, 
 journal={IJITEE}, 
